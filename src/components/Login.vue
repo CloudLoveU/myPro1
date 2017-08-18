@@ -4,7 +4,7 @@
     <form class="" action="index.html" method="post"  class="boxList">
       <label for="">username</label><input type="text" name="" value="">
       <label for="">password</label><input type="text" name="" value="">
-      
+      <router-link to="/Login" tag="button" class="logBtn">Sign in </router-link>
     </form>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
   display: block;
   font-weight:600;
   font-size:14px;
-
+  text-align:left;
 }
 .boxList input{
   display: block;
@@ -41,5 +41,18 @@ export default {
   outline:none;
   border: 1px solid #d1d5da;
   border-radius:3px;
+}
+.logBtn{
+  display:block;
+  height:34px;
+  width:100%;
+  background-color:#28a745;
+  background-image:linear-gradient(-180deg, #34d058 0%, #28a745 90%);
+  color:#fff;
+  font-weight:bold;
+  border:none;
+  outline:none;
+  border-radius:3px;
+  cursor:pointer;
 }
 </style>
