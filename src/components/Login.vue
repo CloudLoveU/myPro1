@@ -1,16 +1,36 @@
 <template lang="html">
   <div class="">
     <h2>Sign In</h2>
-    <form class="" action="index.html" method="post"  class="boxList">
-      <label for="">username</label><input type="text" name="" value="">
+    <form class="" @submit.prevent="sendLogin" method="post"  class="boxList" autocomplete="false">
+      <label for="">username</label><input type="text" name="" ref="userInput" >
       <label for="">password</label><input type="text" name="" value="">
-      <router-link to="/Login" tag="button" class="logBtn">Sign in </router-link>
+      <input type="submit" name="" value="Sign in"  class="logBtn">
     </form>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Login',
+  data () {
+    return {}
+  },
+  methods: {
+    sendLogin () {
+      let userName = this.$refs.userInput.value
+      this.$local.save('wy', {
+        login: true,
+        userName: userName
+      })
+      let redirect = this.$route.query.redirect
+      if (!redirect) {
+        redirect = 'Project'
+      }
+      this.$router.push({
+        path: '/' + redirect
+      })
+    }
+  }
 }
 </script>
 

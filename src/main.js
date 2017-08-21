@@ -3,8 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Utils from './lib/utils.js'
 
-import './assets/css/app.css'
+Vue.use(Utils)
 
 Vue.config.productionTip = false
 
