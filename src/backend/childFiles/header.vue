@@ -1,30 +1,27 @@
 <template>
   <div class="clearFix el-menu--dark">
-    <ul class="el-menu menu-horizontal el-menu--dark el-menu--horizontal header-nav" >
+    <ul class="header" >
       <router-link to="/" class="el-menu-item logo" exact tag="li">
-      <img src="../../assets/miaov.png">
-    </router-link>
-      <router-link to="/Project" class="el-menu-item" tag="li" >
-        <i class="fa fa-home"></i>
+        <img src="../../assets/logo1.jpg" style="width:50px;height:50px;">
+      </router-link>
+      <router-link to="/Project" class="" tag="li" >
         我的项目
       </router-link>
-      <router-link to='/Workbench' class="el-menu-item"  tag="li">
-        <i class="fa fa-code"></i>
+      <router-link to='/Workbench' class=""  tag="li">
         工作台
       </router-link>
-      <router-link to="/Document" class="el-menu-item" tag="li">
-        <i class="fa fa-book"></i>
+      <router-link to="/Document" class="" tag="li">
         文档
       </router-link>
     </ul>
-    <div class="user-info-box" v-show="isLogin">
-      <div class="el-submenu__title">
+    <div class="" v-show="isLogin">
+      <div class="">
         <img src="../../assets/portrait.png">
         <span>{{userName}}</span>
       </div>
-      <div class="header-menu">
-        <ul class="menu-nav">
-          <li class="el-menu-item" @click="loginOut">登出</li>
+      <div class="">
+        <ul class="">
+          <li class="" @click="loginOut">登出</li>
         </ul>
       </div>
     </div>
@@ -43,5 +40,8 @@
   }
 </script>
 <style>
-
+  header li{
+    float:left;
+    
+  }
 </style>
