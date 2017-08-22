@@ -21,8 +21,8 @@ export default {
   color: #2c3e50;
 }
 html,body{
-  padding:0;
-  margin:0;
+  padding:1px;
+  margin:1px;
 }
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s
